@@ -4,18 +4,36 @@
     <meta charset="utf-8">
 <title>智能制造装配虚拟仿真实验平台</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  margin: 0;
-}
 
-/* 头部样式 */
-.header {
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
-}
-</style>
+<style>
+    body {
+      margin: 0;
+    }
+   
+    .header {
+      size:10x;
+      background-color: #f1f1f1;
+      padding: 0.1px;
+      margin-top: -20px;
+      margin-right: -100px;
+      text-align: center;
+      height: -50px;
+      width: 0%;
+    }
+    </style>
+<style>
+     h1{
+     position: absolute;
+     top: -45px;
+     text-align: center;
+     right: 450px;
+     
+
+     }
+      
+
+
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -36,46 +54,127 @@ body {
     </script>
     <script>
         function open_win3() {
-            window.open("自测练习.html");
+            window.open("自测练习页面.html");
         }
     </script>
-    <style>
-    .button-container {
-        display: flex;
-        justify-content: center;
+ <style>
+    .button-container1
+    {
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+height: 900px;
+
+    }
+    .button1{
+        margin: 40px;
+        padding: 10px 20px;
+     ;
     }
 
-    .button-container button {
-        margin-right: 100px;
+</style>
+
+<style>
+    h1{
+      font-family: Arial,sans-serif; 
+      font-size: 50px; 
     }
 </style>
 <style>
-    h1 {letter-spacing:2px;}
-    h2 {button-spacing:-3px;}
+
+    p.pos_fixed
+      {
+          position:fixed;
+          top:65px;
+          left:0px;
+      }   
+     
 </style>
+<style>
+
+    p.pos_fixed1
+      {
+          position:fixed;
+          top:700px;
+          left:250px;
+      }   
+     
+</style>
+<style>
+
+    p.pos_fixed2
+      {
+          position:fixed;
+          top:690px;
+          left:590px;
+      }   
+     
+</style>
+<style>
+
+    p.pos_fixed3
+      {
+          position:fixed;
+          top:700px;
+          left:920px;
+      }   
+     
+</style>
+<style>
+
+    p.pos_fixed4
+      {
+          position:fixed;
+          top:700px;
+          left:1360px;
+      }   
+     
+</style>
+<style>  
+    div.transbox
+    {
+      width: 200px;
+      height: 180px;
+      margin: 90px 50px;
+      background-color: #ffffff;
+      opacity:1;
+      filter:alpha(opacity=80); 
+    }
+  </style>
 </head>
 <body>
     
-    <div class="header">
-        <h1>智能制造装配虚拟仿真实验平台</h1>
+      <div class="header" >
+        <h1 style="font-size: 60px;">智能制造装配虚拟仿真实验平台</h1>
       </div>
-    <p><img src="Markup.jpg" alt="Smiley face" width="820" height="350"></p>
-    <div class="button-container">
-        
+<div class="transbox">
+    <p class="pos_fixed"><img src="Mar.jpg" alt="Smiley face" width="1830" height="568"></p>
+</div>
+    <div class="button-container1" >
+       
         <form>
-            <input type="button" value="整体介绍" onclick="open_ONE()" >
+         <input type="button" value="整体介绍" 
+         onclick="open_ONE()"  style="width:80px ;height: 50px;color:rgba(17, 0, 255, 0.397);background-color :rgba(0, 208, 255, 0.482);border-color:rgba(0, 208, 255, 0.482) ;
+         font-weight: bold;">
         </form>
         <form>
-            <input type="button" value="机构及原理" onclick="open_win1()">
+            <input type="button" value="机构及原理" onclick="open_win1()"style="width:90px ;height: 50px;color:rgba(17, 0, 255, 0.397);background-color :rgba(0, 208, 255, 0.482);
+            border-color:rgba(0, 208, 255, 0.482) ;font-weight: bold;">
         </form>  
         <form>
-            <input type="button" value="工艺与操作练习" onclick="open_win2()">
+            <input type="button" value="工艺与操作练习" onclick="open_win2()"style="width:180px ;height: 50px;color:rgba(17, 0, 255, 0.397);background-color :rgba(0, 208, 255, 0.482);
+            border-color:rgba(0, 208, 255, 0.482) ;font-weight: bold;">
         </form>  
         <form>
-            <input type="button" value="自测练习" onclick="open_win3()">
+            <input type="button" value="自测练习" onclick="open_win3()"style="width:80px ;height: 50px;color:rgba(17, 0, 255, 0.397);background-color :rgba(0, 208, 255, 0.482);
+            border-color:rgba(0, 208, 255, 0.482) ;font-weight: bold;">
         </form> 
+       
     </div>
+    <p class="pos_fixed1"><img src="整体介绍.png" alt="Smiley face" width="80" height="50"></p>
+    <p class="pos_fixed2"><img src="机构及原理.png" alt="Smiley face" width="80" height="60"></p>
+    <p class="pos_fixed3"><img src="工艺.png" alt="Smiley face" width="180" height="50"></p>
+    <p class="pos_fixed4"><img src="自测.png" alt="Smiley face" width="80" height="50"></p>
 
-    
 </body>
 </html>
