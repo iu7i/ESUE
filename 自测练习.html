@@ -1,18 +1,233 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        function open_wind() {
-            window.open("index.html");
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>    
+    <title>text online</title>
+  <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+  </head>
+  <script>
+    function open_wind() {
+        window.open("index.html");
+    }
+</script>
+<script language="javascript">
+ 
+  function two_char(n) {
+            return n >= 10 ? n : "0" + n;
         }
-    </script>
-</head>
-<body>
-    <form>
-        <p><input type="button" value="返回" onclick="open_wind()" >
-    </form>
-</body>
+        function time_fun() {
+            var sec=0;
+            setInterval(function () {
+                sec++;
+                var date = new Date(0, 0)
+                date.setSeconds(sec);
+                var h = date.getHours(), m = date.getMinutes(), s = date.getSeconds();
+                document.getElementById("mytime").innerText = two_char(h) + ":" + two_char(m) + ":" + two_char(s);
+            }, 1000);
+        }
+ function a(){
+return abcd
+ }
+function main(){
+  var questionArray = new Array("Q1","Q2","Q3","Q4","Q5","Q6","Q7","Q8","Q9","Q10");
+  var resultArray = new Array();
+   var rightArray = new Array();
+ 
+ 
+  var aryAns = new Array(4,1,2,1,1,3,2,4,3,1);   
+  for (var i = 0; i < questionArray.length; i++) {
+    if (Name(questionArray[i])!=10) {
+      resultArray[i] = Name(questionArray[i]); 
+    }else{
+      alert("第"+(i+1)+"题,您未作答!!");
+      return false;
+    }
+  }
+  var right_number= 0;//计算答对的题数；
+  for (var i = 0; i < questionArray.length; i++) {
+    if (aryAns[i]==resultArray[i]) {
+          right_number++;
+          rightArray[i] = 1;
+    }else{
+          rightArray[i] = 0;
+    }
+  }
+  var right_question = " ";
+  var error_question = " ";
+  var right="aaa"
+  for (var i = 0; i < rightArray.length; i++) {
+      if (rightArray[i] ==1 ) {
+          right_question += i+1+",";
+      }else{
+          error_question += i+1+",";
+      }
+  }
+  
+  var time=document.getElementById("mytime").innerHTML;
+  document.getElementById("right_number").innerText = right_number;
+  document.getElementById("time").innerText = time;
+  if (right_question!=" ") {
+      document.getElementById("right_question").innerText = right_question;
+ 
+  }
+  if (error_question!=" ") {
+  document.getElementById("error_question").innerText = error_question;
+ 
+}
+};
+ 
+function Name(name)
+{
+  var temp = document.getElementsByName(name);
+  var intHot = 9;
+  for(var i=0;i<temp.length;i++)
+  {
+     if(temp[i].checked)
+      intHot = temp[i].value;
+  }
+  if (intHot==9) {
+      return 10;
+  }
+  return intHot;
+};
+ function min(){
+  console.log("abcdef");
+ }
+ 
+</script>
+
+<style>
+  .button-container {
+            position: fixed;
+            top: 53PX;
+            right:0px;
+            display: flex;
+            transform: translateX(-50%);
+           
+        }
+    </style>
+
+<body onload="time_fun()" style="padding:80px">
+  	<center>
+  		<font size="6" color="green"><b>自测练习在线检测</b></font>
+        <h1>测试已开始 请开始作答  <span id="mytime">00:00:00</span></h1>
+ 
+  	</center><br>
+  	<hr>
+  	<!--  下面表单将以post的方法，将数据传递给Text -->
+  		<!-- 第一道题 -->
+  		<p>1.jt 文件放在根目录的什么文件夹内（）？注:根目录为A://projrct//test</p >
+  		<p>
+            <input type="radio" name="Q1" value="1">A. A://<br>
+            <input type="radio" name="Q1" value="2">B. A://projrct//test<br>
+            <input type="radio" name="Q1" value="3">C. A://projrct//test下新建一个英文字母+数字命名的文件夹<br>
+            <input type="radio" name="Q1" value="4">D. A://projrct//test下新建一个英文字母+数字命名的文件夹，且新建文件夹名以".cojt"结尾  <!-- D -->
+        </p >
+        <p>2.怎么打开jt文件和PSZ文件 ()？</p >
+          <p>
+            <input type="radio" name="Q2" value="1">A.将jt放在文件夹名以".cojt"结尾的文件下，再放入根目录,在软件中选中文件夹名以".cojt"结尾的文件先定义组件类型再导入;PSZ文件直接打开<br>
+            <input type="radio" name="Q2" value="2">B.直接导入jt文件，再根据需要修改组件属性，使其满足所需要求；将jt放在文件夹名以".cojt"结尾的文件下，再放入根目录,在软件中选中文件夹名以".cojt"结尾的文件先定义组件类型再导入<br>
+            <input type="radio" name="Q2" value="3">C.将jt文件、PSZ文件放在文件夹名以".cojt"结尾的文件下，再放入根目录,在软件中选中文件夹名以".cojt"结尾的文件先定义组件类型再导入<br>   <!-- A -->
+            <input type="radio" name="Q2" value="4">D.jt、PSZ文件直接打开<br>
+          </p >
+          <p>3.导入零件或机构的方式 ()？</p >
+  		<p>
+  			<input type="radio" name="Q3" value="1">A.直接导入<br>
+  			<input type="radio" name="Q3" value="2">B.放于对应的.cojt文件夹下导入<br>
+  			<input type="radio" name="Q3" value="3">C.放于对应的.cojt文件夹下，先定义再导入<br>
+  			<input type="radio" name="Q3" value="4">D.放于对应的.cojt文件夹下，先导入再定义<br>   <!-- B -->
+  		</p >
+  		<p>4.下列次对应器件正确的是 ()？</P>
+  		<p>
+  			<input type="radio" name="Q4" value="1">A.gripper-夹具；Device-设备<br>
+  			<input type="radio" name="Q4" value="2">B.Device-装配体<br>
+  			<input type="radio" name="Q4" value="3">C.PartPrototype-零件；Gun-枪械<br>    <!-- A -->
+  			<input type="radio" name="Q4" value="4">D.Robot-人形机器人<br>
+  		</p >
+  		
+      <p>5.定义机器人需要设置什么坐标 ( )？</p >
+        <p>
+          <input type="radio" name="Q5" value="1">A.base坐标；tcp坐标<br>
+          <input type="radio" name="Q5" value="1">B.work坐标<br>     <!-- A -->
+          <input type="radio" name="Q5" value="3">C.base坐标<br>
+          <input type="radio" name="Q5" value="4">D.tcp坐标<br>
+        </p >
+        <p>6.机器人工具的定义需要完成 ( )？</p >
+          <p>
+            <input type="radio" name="Q6" value="1">A.运动编辑；姿态编辑；建立base坐标、tcp坐标<br>
+            <input type="radio" name="Q6" value="2">B.运动编辑；建立work坐标<br>  <!-- C -->
+            <input type="radio" name="Q6" value="3">C.建立base坐标、tcp坐标<br>
+            <input type="radio" name="Q6" value="4">D.运动编辑；姿态编辑；建立work坐标<br>
+          </p >
+          <p>7.如何零件组合在一起的 ( )？</p >
+            <p>
+              <input type="radio" name="Q7" value="1">A.设置detach或显示、隐藏<br>
+              <input type="radio" name="Q7" value="2">B.设置attach或显示、隐藏<br> <!-- B -->
+              <input type="radio" name="Q7" value="3">C.设置attach<br>
+              <input type="radio" name="Q7" value="4">D.设置mount或显示、隐藏<br>
+            </p >
+            <p>8.如何实现机构的运动 ( )？
+              <br>①依照结构划分机构
+                  <br>②建立运动属性（转动或平动）
+                  <br>③设置机构相对运动的坐标
+                  <br>④根据相对运动关系建立起始坐标
+                  <br>⑤进行姿态编辑
+                  
+            </p >
+              
+              <p>
+                <input type="radio" name="Q8" value="1">A.①②③④⑤<br>
+                <input type="radio" name="Q8" value="2">B.②③④⑤<br>    <!-- D -->
+                <input type="radio" name="Q8" value="3">C.①②③⑤<br>
+                <input type="radio" name="Q8" value="4">D.①②③④<br>
+              </p >
+              <p>9.定义机器人需要设置什么坐标 ( )？</p >
+                <p>
+                  <input type="radio" name="Q9" value="1">A.tcp坐标<br>
+                  <input type="radio" name="Q9" value="2">B.work坐标、base坐标、tcp坐标<br>  <!-- C -->
+                  <input type="radio" name="Q9" value="3">C.base坐标、tcp坐标<br>
+                  <input type="radio" name="Q9" value="4">D.base坐标<br>
+                </p >
+                <p>10.如何将多个操作合并在一起 ( )？
+                  <br>设置复合操作，将需要合并的操作拉入，再根据发生时间的先后顺序调节操作
+                </p >
+                  <p>
+                    <input type="radio" name="Q10" value="1">正确<br>
+                    <input type="radio" name="Q10" value="2">错误<br> <!-- 正确 -->
+
+                  </p >
+      <button onclick="javascript:main()">提交</button>
+
+  		<h3>
+  		五道题中您一共答对了<font color="red"><span id="right_number"></font>题，
+        花了<font color="red"><span id="time"></span></font>秒
+        <br>
+      <br>
+      正确的题目有:<span id="right_question"  style="color:rgba(0, 255, 13, 0.616)"></span>
+       <br>
+      错误的题目有:<span id="error_question"  style="color:red"></span>
+      <br>
+      正确答案：<span  id="right"> </span>
+      </h3>
+      <div class="button-container" >
+        <form>
+          <b>
+            <p style="font-weight: bold;"><input type="button" value="返回" onclick="open_wind()"  
+              style='width:80px ;height: 50px;color :rgba(0, 0, 255, 0.521);
+              background-color :rgba(0, 208, 255, 0.482); border-color: #f1f1f1;
+              border-right: white;border-bottom: white;text-decoration: double;font-weight: bold;font-size: 20px;
+              '>
+          </b>
+            </p>
+        </form>
+     </div>
+  </body>
 </html>
+ 
