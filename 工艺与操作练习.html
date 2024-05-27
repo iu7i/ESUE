@@ -1,72 +1,272 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        function open_win1() {
-            window.open("ming.html");
-        }
-    </script>
-     <script>
-        function open_win2() {
-            window.open("ming.html");
-        }
-    </script>
-     <script>
-        function open_win3() {
-            window.open("ming.html");
-        }
-    </script>
-     <script>
-        function open_win4() {
-            window.open("ming.html");
-        }
-    </script>
- <script>
-    function open_win5() {
-        window.open("ming.html");
-    }
-</script>
-
-<script>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>    
+    <title>text online</title>
+  <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+  </head>
+  <script>
     function open_wind() {
         window.open("index.html");
     }
 </script>
+<script language="javascript">
+ 
+  function two_char(n) {
+            return n >= 10 ? n : "0" + n;
+        }
+        function time_fun() {
+            var sec=0;
+            setInterval(function () {
+                sec++;
+                var date = new Date(0, 0)
+                date.setSeconds(sec);
+                var h = date.getHours(), m = date.getMinutes(), s = date.getSeconds();
+                document.getElementById("mytime").innerText = two_char(h) + ":" + two_char(m) + ":" + two_char(s);
+            }, 1000);
+        }
+ function a(){
+return abcd
+ }
+function main(){
+  var questionArray = new Array("Q1","Q2","Q3","Q4","Q5","Q6","Q7","Q8","Q9","Q10");
+  var resultArray = new Array();
+   var rightArray = new Array();
+ 
+ 
+  var aryAns = new Array(1,3,4,2,3,1,1,1,3,4);   
+  for (var i = 0; i < questionArray.length; i++) {
+    if (Name(questionArray[i])!=10) {
+      resultArray[i] = Name(questionArray[i]); 
+    }else{
+      alert("第"+(i+1)+"题,您未作答!!");
+      return false;
+    }
+  }
+  var right_number= 0;//计算答对的题数；
+  for (var i = 0; i < questionArray.length; i++) {
+    if (aryAns[i]==resultArray[i]) {
+          right_number++;
+          rightArray[i] = 1;
+    }else{
+          rightArray[i] = 0;
+    }
+  }
+  var right_question = " ";
+  var error_question = " ";
+  var right="aaa"
+  for (var i = 0; i < rightArray.length; i++) {
+      if (rightArray[i] ==1 ) {
+          right_question += i+1+",";
+      }else{
+          error_question += i+1+",";
+      }
+  }
+  
+  var time=document.getElementById("mytime").innerHTML;
+  document.getElementById("right_number").innerText = right_number;
+  document.getElementById("time").innerText = time;
+  if (right_question!=" ") {
+      document.getElementById("right_question").innerText = right_question;
+ 
+  }
+  if (error_question!=" ") {
+  document.getElementById("error_question").innerText = error_question;
+ 
+}
+};
+ 
+function Name(name)
+{
+  var temp = document.getElementsByName(name);
+  var intHot = 9;
+  for(var i=0;i<temp.length;i++)
+  {
+     if(temp[i].checked)
+      intHot = temp[i].value;
+  }
+  if (intHot==9) {
+      return 10;
+  }
+  return intHot;
+};
+ function min(){
+  console.log("abcdef");
+ }
+ 
+</script>
 
+<style>
+  .button-container {
+            position: fixed;
+            top: 53PX;
+            right:0px;
+            display: flex;
+            transform: translateX(-50%);
+           
+        }
+    </style>
 
+<body onload="time_fun()" style="padding:80px">
+  	<center>
+  		<font size="6" color="green"><b>工艺与操作练习在线检测</b></font>
+        <h1>测试已开始 请开始作答  <span id="mytime">00:00:00</span></h1>
+ 
+  	</center><br>
+  	<hr>
+  	<!--  下面表单将以post的方法，将数据传递给Text -->
+  		<!-- 第一道题 -->
+  		<p>1.1机器人及夹具说法正确的是()?
+        <br>①机器人夹具库由机器人本体和机器人快夹组成
+        <br>①机器人夹具库由机器人本体和机器人快夹组成
+        <br>②快夹又分为3种功能类型夹具（三爪夹具、组合夹具和平行夹具），通过气动回路进行吸附。
+        <br>③三爪夹具主要用于笔筒外壳的内圈夹持，机器人抓取后进行笔筒贴片动作。
+        <br>④组合夹具一侧主要用于笔筒底板、笔筒轴承外圈以及轴承的抓取，另一侧用于笔筒锁紧轴的抓取，机器人抓取后进行笔筒装配动作。
+        <br>⑤平行夹具主要用于笔筒外壳的外壁夹持，机器人抓取后进行笔筒搬运动作。</p >
+  		<p>
+            <input type="radio" name="Q1" value="1">A. ①②③④⑤<br>
+            <input type="radio" name="Q1" value="2">B. ②③④<br>
+            <input type="radio" name="Q1" value="3">C.①③④⑤<br>
+            <input type="radio" name="Q1" value="4">D.②③④⑤ <!-- A -->
+        </p >
+        <p>2.机器人拾取工艺工作顺序正确的是（）？
+<br>①夹具自动吸附在机器人上
+<br>②机器人移动到被拾取物体的位置
+<br>③夹具呈CLOSE姿态，拾起物体到放置位置时，夹具呈OPEN姿态
+<br>④机器人移动到夹具库
+<br>⑤夹具从机器人上脱落
+</p >
+          <p>
+            <input type="radio" name="Q2" value="1">A.①②③④⑤<br>
+            <input type="radio" name="Q2" value="2">B.①②③④⑤①<br>
+            <input type="radio" name="Q2" value="3">C.④①②③④⑤<br>   <!-- C -->
+            <input type="radio" name="Q2" value="4">D.①②③⑤<br>
+          </p >
+          <p>3.机器人说法正确的有()?
+            <br>①机器人拾放物体结束后，不需要更换夹具
+            <br>②机器人需要根据被拾放物体，更换夹具
+            <br>③在拾放过程中，添加合适位置使仿真更流畅
+            </p >
+  		<p>
+  			<input type="radio" name="Q3" value="1">A.①②<br>
+  			<input type="radio" name="Q3" value="2">B.①②③<br>
+  			<input type="radio" name="Q3" value="4">C.②③<br>   <!-- D -->
+  		</p >
+  		<p>4.视觉检测工作顺序正确的是（）？
+       <br>①由6轴机器人吸附三爪夹具将笔筒外壳夹持到视觉检测区域进行笔筒外壳型腔形状扫描
+       <br>②视觉相机对人工随意摆放的贴片进行形状及角度定位
+       <br>③确认后机器人移开检测区域
+       <br>④配合4轴机器人真空吸盘进行跟踪拾取，将指定贴片放置到笔筒外壳的型腔中
+       <br>⑤重复上述动作，完成整个笔筒的贴片过程。</P>
+  		<p>
+  			<input type="radio" name="Q4" value="1">A.①②③④⑤<br>
+  			<input type="radio" name="Q4" value="2">B..①③②④⑤<br>
+  			<input type="radio" name="Q4" value="3">C.①③④⑤<br>    <!-- B -->
+  			<input type="radio" name="Q4" value="4">D.②③④⑤<br>
+  		</p >
+  		
+      <p>5.轴承冲压机构工作顺序正确的是（）？
+        <br>①由6轴机器人吸附组合夹具将笔筒轴承外圈抓取到冲压区域平台定位销上进行定位
+        <br>②光纤传感器检测笔筒轴承外圈已放置到位后将导向定位气缸升起
+        <br> ③6轴机器人吸附组合夹具将轴承抓取到导向定位气缸伸导向杆上，冲压气缸进行一次向下冲压动作并复位，同时导向定位气缸缓慢缩回
+        <br>④轴承冲压完毕后，由机器人将其抓取到锁丝区域进行锁丝工作，该装置等待下一次冲压动作。</p >
+        <p>
+          <input type="radio" name="Q5" value="1">A①②④<br>
+          <input type="radio" name="Q5" value="1">B.①③②④<br>     <!-- C -->
+          <input type="radio" name="Q5" value="3">C.①②③④<br>
+          <input type="radio" name="Q5" value="4">D.①③④<br>
+        </p >
+        <p>6.轴承上料机构工作顺序正确的是（）？
+          <br>①人工将轴承依次摆放至料筒内当料筒内检测开关检测到有料时，同时到位检测开关没检测到轴承，此时推料气缸将最底层轴承推出并缩回气缸
+          <br>②当料筒内检测开关检测到有料时，同时到位检测开关没检测到轴承，此时推料气缸将最底层轴承推出并缩回气缸
+          <br>③当轴承到位后由机器人抓取到轴承冲压区域</p >
+          <p>
+            <input type="radio" name="Q6" value="1">A.①②③<br>
+            <input type="radio" name="Q6" value="2">B.①③②<br>  <!-- A -->
+            <input type="radio" name="Q6" value="3">C.③②①<br>
+            
+          </p >
+          <p>7锁紧轴冲压机构
+            <br>①上电复位初始状态，
+            <br>②由6轴机器人吸附组合夹具将笔筒锁紧轴抓取到平台定位销上进行定位
+            <br>③此时光电开关检测到有料信号，移动气缸缩回到冲压区域，
+            <br>④再由6轴机器人更换夹具并吸附平行夹具将笔筒外壳抓取到笔筒锁紧轴上进行套合
+            <br>⑤定位气缸伸出进行定位，冲压气缸向下冲压一次
+            <br>⑥冲压完成后缩回，移动气缸伸出，完成整个冲压动作，
+            <br>⑦最后由机器人将其抓取到锁丝区域进行锁丝工作，该装置等待下一次冲压动作。</p >
+            <p>
+             <input type="radio" name="Q7" value="1">A.①②④③⑤⑥⑦<br>
+              <input type="radio" name="Q7" value="2">B.①②③④⑤⑥⑦<br> <!-- A-->
+              <input type="radio" name="Q7" value="3">C.①②③⑤⑥⑦<br>
+              <input type="radio" name="Q7" value="4">D.①②③④⑤⑦<br>
+            </p >
+            <p>8.关于锁紧轴上料机构说法正确的是()?
 
-</head>
-<body>
-    <form>
-        <input type="button" value="轴承冲压" onclick="open_win1()">
-    </form>
+              人工将笔筒锁紧轴依次放置在平台上，通过感应开关检测该工位是否有料；当一侧5个工位全部无料时，将会触发旋转气缸进行旋转，利用另一侧工件继续工作；当两侧均无料时，将触发报警信号，提示人员及时补料</p >
+              <p>
+                <input type="radio" name="Q8" value="1">正确<br>
+                <input type="radio" name="Q8" value="2">错误<br>    <!-- 正确 -->
+                
+              </p >
+              <p>9.锁丝装配机构工作顺序正确的是（）？
 
+                <br>①上电复位，左右前后移动轴都移动到初始位置
+                <br>②再由6轴机器人更换快夹并吸附组合夹具将冲压过后的笔筒轴承外圈或笔筒底板抓取到气动定位装置上与笔筒外壳进行套合，套合后进行气动夹紧定位
+                <br>③此时6轴机器人吸附平行夹具将笔筒外壳抓取到气动定位装置上
+                <br>④此时通过程序控制将左右前后移动轴精确移动到锁丝孔位上，触发送丝机动作，吹出一颗M6*12规格螺栓（吹气管上安装有高速检测传感器，用于判断是否漏锁及计数功能），当螺栓到达锁嘴处时，触发锁批转动同时缓慢向下移动进行锁丝工作，当锁批到达一定扭矩时，锁批停止转动并升起，完成一次螺栓锁丝过程。④以此类推，将移动轴移动到指定位置后，完成所有螺栓锁丝。⑤最后将锁丝装配好的笔筒通过6轴机器人抓取放回到弧形仓储的指定位置</p >
+                <p>
+                  <input type="radio" name="Q9" value="1">A.①②④⑤<br>
+                  <input type="radio" name="Q9" value="2">B.①②③④⑤<br>  <!-- C -->
+                  <input type="radio" name="Q9" value="3">C.①③②④⑤<br>
+                  <input type="radio" name="Q9" value="4">D.①③④⑤<br>
+                </p >
+                <p>10.系统动作流程如下，排序正确的是()?
+                  <br>①利用搭载的软件让学员完成装配工艺程序及数据调整，人机智能交互开始下单，系统运行;
+                  <br>②机器人从立库中取出笔筒主体原料放入贴片旋转台；
+                  <br>③视觉系统识别笔筒面上的形状通知SCARA机器人取片进行贴片装配；
+                  <br>④贴片装配完成后机器人将笔筒主体放入轴承压装平台，取出轴承后放到笔筒上压装机压装；
+                  <br>⑤机器人将压装完成的笔筒主体搬运到锁丝装配平台后放上轴承座，螺栓装配机械手开始锁丝装配；
+                  <br>⑥轴承座锁丝装配完成后机器人将其搬运到旋转轴与底座压装位置，旋转轴和旋转底板自动供料，机器人抓取后放置到笔筒上，然后压装机进行底座与旋转轴压装，笔筒组装完成；
+                  <br>⑦机器人将完整的笔筒放回立库成品区，等待人工取货。</p >
+                  <p>
+                    <input type="radio" name="Q10" value="1">A.①②③④⑥⑦<br>
+                    <input type="radio" name="Q10" value="2">B.①③④⑤⑥⑦<br>   <!-- D -->
+                    <input type="radio" name="Q10" value="3">C.①②③④⑤⑥⑦<br>
+                    <input type="radio" name="Q10" value="4">D.①②③④⑤⑥⑦
+                    <br>
+                  </p >
+      <button onclick="javascript:main()">提交</button>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <form>
-        <p><input type="button" value="返回" onclick="open_wind()">
-    </form>
-</body>
+  		<h3>
+  		五道题中您一共答对了<font color="red"><span id="right_number"></font>题，
+        花了<font color="red"><span id="time"></span></font>秒
+        <br>
+      <br>
+      正确的题目有:<span id="right_question"  style="color:rgba(0, 255, 13, 0.616)"></span>
+       <br>
+      错误的题目有:<span id="error_question"  style="color:red"></span>
+      <br>
+      正确答案：<span  id="right"> </span>
+      </h3>
+      <div class="button-container" >
+        <form>
+          <b>
+            <p style="font-weight: bold;"><input type="button" value="返回" onclick="open_wind()"  
+              style='width:80px ;height: 50px;color :rgba(0, 0, 255, 0.521);
+              background-color :rgba(0, 208, 255, 0.482); border-color: #f1f1f1;
+              border-right: white;border-bottom: white;text-decoration: double;font-weight: bold;font-size: 20px;
+              '>
+          </b>
+            </p>
+        </form>
+     </div>
+  </body>
 </html>
+ 
